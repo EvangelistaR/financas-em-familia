@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.7.2'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,11 +42,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution / get debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara'
-  gem 'factory_bot_rails'
+  # gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.7'
   gem 'rubocop', '~> 0.58.1', require: false
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.13'
 end
 
 group :test do
@@ -54,7 +54,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~>0.18'
+  gem 'pg'
 end
 
 group :development do
